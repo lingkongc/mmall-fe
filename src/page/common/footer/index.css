@@ -1,0 +1,26 @@
+/*
+* @Author: lingkongc
+* @Date:   2019-06-26 19:14:21
+* @Last Modified by:   lingkongc
+* @Last Modified time: 2019-06-26 19:22:31
+*/
+
+.footer {
+    padding-bottom: 10px;
+}
+
+.footer .links {
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.footer .link{
+    padding: 0 5px;
+}
+
+.footer .copyright {
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+}

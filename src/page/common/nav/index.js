@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-26 16:38:07
  * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-26 17:37:32
+ * @Last Modified time: 2019-06-26 20:14:52
  */
 
 
@@ -12,7 +12,7 @@ require('./index.css');
 
 var _mm = require('../../../util/mm.js');
 var _user = require('../../../service/user-server.js');
-var _cart = require('../../../service/user-server.js');
+var _cart = require('../../../service/cart-server.js');
 
 // 导航
 var nav = {

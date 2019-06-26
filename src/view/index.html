@@ -10,14 +10,9 @@
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
-    
     <%= require('html-loader!./layout/nav.html') %>
-
-    <a href="index.html" class="link">link</a>
-    <a href="index.html" class="link-text">link</a>
-    <a href="index.html" class="btn">link</a>
-    <a href="index.html" class="btn btn-min">link</a>
-    <i class="fa fa-user"></i>
+    <%= require('html-loader!./layout/header.html') %>
+ 
     <div class="loading"></div>
     <%= require('html-loader!./layout/footer.html') %>
 </body>

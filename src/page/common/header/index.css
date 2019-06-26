@@ -1,0 +1,38 @@
+/*
+* @Author: lingkongc
+* @Date:   2019-06-26 19:33:49
+* @Last Modified by:   lingkongc
+* @Last Modified time: 2019-06-26 20:28:02
+*/
+
+/*通用头部导航*/
+.header .logo {
+    position: absolute;
+    display: block;
+    left: 60px;
+    top: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #c60023;
+}
+
+.header .search {
+    padding: 30px 0 30px 250px;
+}
+
+.header .search-input {
+    padding: 0 10px;
+    width: 550px;
+    height: 40px;
+    outline: none;
+    color: #666;
+    font-size: 15px;
+    border: 2px solid #c60023;
+}
+
+.header .search-btn {
+    position: absolute;
+    height: 44px;
+    width: 80px;
+}

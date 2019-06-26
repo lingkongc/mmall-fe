@@ -2,7 +2,7 @@
 * @Author: lingkongc
 * @Date:   2019-06-26 16:40:41
 * @Last Modified by:   lingkongc
-* @Last Modified time: 2019-06-26 16:47:50
+* @Last Modified time: 2019-06-26 20:25:19
 */
 .nav {
     background: #eee;
@@ -17,7 +17,7 @@
 }
 
 .nav .user .link{
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .nav .user.login{
@@ -31,5 +31,5 @@
 
 .nav .nav-list .nav-item{
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 10px;
 }
