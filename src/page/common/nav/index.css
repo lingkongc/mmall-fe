@@ -1,0 +1,35 @@
+/*
+* @Author: lingkongc
+* @Date:   2019-06-26 16:40:41
+* @Last Modified by:   lingkongc
+* @Last Modified time: 2019-06-26 16:47:50
+*/
+.nav {
+    background: #eee;
+    height: 30px;
+    line-height: 30px;
+}
+
+/*用户*/
+
+.nav .user{
+    float: left;
+}
+
+.nav .user .link{
+    margin-right: 5px;
+}
+
+.nav .user.login{
+    display: none;
+}
+
+/*导航链接*/
+.nav .nav-list{
+    float: right;
+}
+
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}

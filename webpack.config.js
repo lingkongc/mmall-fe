@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-25 10:20:05
+ * @Last Modified time: 2019-06-26 16:07:03
  */
 
 const path = require('path');
@@ -21,14 +21,13 @@ const getHtmlConfig = function(name) {
         chunks: ['common', name]
     }
 };
-
 const config = {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        common: './src/page/common/',
-        index: './src/page/index/',
-        login: './src/page/login/'
+        common: './src/page/common/index.js',
+        index: './src/page/index/index.js',
+        // login: './src/page/login/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -47,55 +46,51 @@ const config = {
         historyApiFallback: true,
         // 代理 请求改地址就会转发 有利于开发环境
         // 仅对开发环境生效，线上请求的是源码中的地址
-        // proxy: {
-        //     // '/react/api': 'http://www.dell-lee.com'
-        //     '/react/api': {
-        //         target: 'http://www.dell-lee.com',
-        //         pathRewrite: {
-        //             'header.json': 'demo.json'
-        //         },
-        //         changeOrigin: true
-        //     }
-        // }
-    },
-
-    optimization: {
-        //使用tree shaking的方法
-        usedExports: true,
-        // 代码分割
-        splitChunks: {
-            chunks: "all",
-            minSize: 30000,
-            // 打包的包被引用的最小次数
-            minChunks: 1,
-            // 最大异步加载的js数量
-            maxAsyncRequests: 5,
-            // 首页入口文件加载的js数量
-            maxInitialRequests: 3,
-            // 分割文件的分隔符
-            automaticNameDelimiter: "~",
-            name: true,
-            cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    // 规则优先级 越大越高
-                    priority: -10,
-                    filename: "vendors.js"
+        proxy: {
+            // '/react/api': 'http://www.dell-lee.com'
+            '/api': {
+                target: 'http://happymmall.com',
+                pathRewrite: {
+                    'header.json': 'demo.json'
                 },
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    // 如果一个模块已经被打包过了，就忽略这个模块
-                    reuseExistingChunk: true
-                }
+                changeOrigin: true
             }
         }
     },
+    // optimization: {
+    //     //使用tree shaking的方法
+    //     usedExports: true,
+    //     // 代码分割
+    //     splitChunks: {
+    //         chunks: "all",
+    //         minSize: 30000,
+    //         // 打包的包被引用的最小次数
+    //         minChunks: 1,
+    //         // 最大异步加载的js数量
+    //         maxAsyncRequests: 5,
+    //         // 首页入口文件加载的js数量
+    //         maxInitialRequests: 3,
+    //         // 分割文件的分隔符
+    //         automaticNameDelimiter: "~",
+    //         name: true,
+    //         cacheGroups: {
+    //             vendors: {
+    //                 test: /[\\/]node_modules[\\/]/,
+    //                 // 规则优先级 越大越高
+    //                 priority: -10,
+    //                 filename: "vendors.js"
+    //             },
+    //             default: {
+    //                 minChunks: 2,
+    //                 priority: -20,
+    //                 // 如果一个模块已经被打包过了，就忽略这个模块
+    //                 reuseExistingChunk: true
+    //             }
+    //         }
+    //     }
+    // },
     module: {
         rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/
-        }, {
             test: /\.(jpg|png|gif)$/,
             use: {
                 loader: 'url-loader',
@@ -106,7 +101,7 @@ const config = {
                 }
             }
         }, {
-            test: /\.(woff|eot|ttf|svg)$/,
+            test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
             loader: 'file-loader'
         }, {
             test: /\.css$/,
@@ -128,7 +123,7 @@ const config = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new webpack.NamedModulesPlugin(),
+        // new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         // css单独打包
         new MiniCssExtractPlugin({
@@ -139,7 +134,7 @@ const config = {
         }),
         // html模版处理
         new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        // new HtmlWebpackPlugin(getHtmlConfig('login'))
     ]
 };
 

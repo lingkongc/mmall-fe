@@ -1,17 +1,25 @@
 <!doctype html>
 <html class="no-js" lang="zh">
-<%= require('html-loader!./layout/html-head.html') %>
+
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>mmall电商平台</title>
+</head>
 
 <body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <p>test</p>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
-    </script>
+    <![endif]-->
+    
+    <%= require('html-loader!./layout/nav.html') %>
+
+    <a href="index.html" class="link">link</a>
+    <a href="index.html" class="link-text">link</a>
+    <a href="index.html" class="btn">link</a>
+    <a href="index.html" class="btn btn-min">link</a>
+    <i class="fa fa-user"></i>
+    <div class="loading"></div>
+    <%= require('html-loader!./layout/footer.html') %>
 </body>
 
 </html>
