@@ -1,0 +1,37 @@
+/*
+* @Author: Asling
+* @Date:   2019-06-27 18:39:26
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-06-28 12:27:49
+*/
+
+
+.page-wrap {
+    padding: 30px 0;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.result-container{
+    display: none;
+}
+
+.result-container .result-title {
+    color: #444;
+}
+
+.result-container .result-content{
+    margin-top: 30px;
+}
+
+.result-container .link{
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: #999;
+    border: 1px solid;
+}
+
+.result-container .link:hover{
+    color: #c60023;
+}

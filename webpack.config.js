@@ -1,8 +1,8 @@
 /*
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
- * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-26 16:07:03
+ * @Last Modified by:   Asling
+ * @Last Modified time: 2019-06-27 18:42:19
  */
 
 const path = require('path');
@@ -12,10 +12,11 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // 获取html-webpack-plugin参数
-const getHtmlConfig = function(name) {
+const getHtmlConfig = function(name, title) {
     return {
         template: `./src/view/${name}.html`,
         filename: `view/${name}.html`,
+        title: title,
         inject: true,
         hash: true,
         chunks: ['common', name]
@@ -27,7 +28,8 @@ const config = {
     entry: {
         common: './src/page/common/index.js',
         index: './src/page/index/index.js',
-        // login: './src/page/login/index.js'
+        // login: './src/page/login/index.js',
+        result: './src/page/result/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -75,10 +77,10 @@ const config = {
     //         name: true,
     //         cacheGroups: {
     //             vendors: {
-    //                 test: /[\\/]node_modules[\\/]/,
+    //                 test: './src/page/common/index.js',
     //                 // 规则优先级 越大越高
     //                 priority: -10,
-    //                 filename: "vendors.js"
+    //                 filename: "base.js"
     //             },
     //             default: {
     //                 minChunks: 2,
@@ -100,6 +102,9 @@ const config = {
                     limit: 10240
                 }
             }
+        }, {
+            test: /\.string$/,
+            loader: 'html-loader'
         }, {
             test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
             loader: 'file-loader'
@@ -133,8 +138,9 @@ const config = {
             chunkFilename: '[id].css'
         }),
         // html模版处理
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        // new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        // new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };
 
