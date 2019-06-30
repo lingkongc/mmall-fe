@@ -1,8 +1,8 @@
 /*
  * @Author: lingkongc
  * @Date:   2019-06-25 16:26:16
- * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-25 22:38:46
+ * @Last Modified by:   Asling
+ * @Last Modified time: 2019-06-30 15:15:11
  */
 
 'use strict';
@@ -10,7 +10,7 @@
 var Hogan = require('hogan.js');
 
 var conf = {
-    serverHost: ''
+    serverHost: '/api'
 }
 
 var _mm = {
@@ -47,7 +47,6 @@ var _mm = {
     // 获取服务器地址
     getServerUrl: function(path) {
         return conf.serverHost + path;
-        // body...
     },
     // 获取url参数
     getUrlParam: function(name) {
@@ -91,7 +90,7 @@ var _mm = {
     },
     // 登录处理
     doLogin: function() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     }
 
 }

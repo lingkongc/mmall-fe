@@ -2,7 +2,7 @@
  * @Author: Asling
  * @Date:   2019-06-27 18:28:49
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-28 12:35:52
+ * @Last Modified time: 2019-06-29 15:45:32
  */
 
 'user strict';
@@ -15,4 +15,4 @@ $(function() {
         $element = $('.' + type + '-success');
 
     $element.show();
-});
+}); 

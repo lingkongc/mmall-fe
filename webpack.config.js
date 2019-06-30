@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-27 18:42:19
+ * @Last Modified time: 2019-06-30 15:16:51
  */
 
 const path = require('path');
@@ -26,10 +26,10 @@ const config = {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        common: './src/page/common/index.js',
-        index: './src/page/index/index.js',
-        // login: './src/page/login/index.js',
-        result: './src/page/result/index.js'
+        'common': './src/page/common/index.js',
+        'index': './src/page/index/index.js',
+        'user-login': './src/page/user-login/index.js',
+        'result': './src/page/result/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -44,8 +44,8 @@ const config = {
         open: true,
         port: 8080,
         hot: true,
-        hotOnly: true,
         historyApiFallback: true,
+        compress: true,
         // 代理 请求改地址就会转发 有利于开发环境
         // 仅对开发环境生效，线上请求的是源码中的地址
         proxy: {
@@ -53,9 +53,9 @@ const config = {
             '/api': {
                 target: 'http://happymmall.com',
                 pathRewrite: {
-                    'header.json': 'demo.json'
+                    '^/api': ''
                 },
-                changeOrigin: true
+                changeOrigin: true,
             }
         }
     },
@@ -139,7 +139,7 @@ const config = {
         }),
         // html模版处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-        // new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };
