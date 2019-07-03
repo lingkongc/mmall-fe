@@ -1,8 +1,8 @@
 /*
  * @Author: lingkongc
  * @Date:   2019-06-26 16:38:07
- * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-26 20:14:52
+ * @Last Modified by:   Asling
+ * @Last Modified time: 2019-06-30 19:41:57
  */
 
 
@@ -30,7 +30,7 @@ var nav = {
 
         // 注册点击事件
         $('.js-register').click(function() {
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
 
         // 退出点击事件
@@ -46,10 +46,11 @@ var nav = {
     // 加载用户信息
     loadUserInfo: function() {
         _user.checkLogin(function(res) {
-            $('.user.not-login').hide().siblings('.user.login').show()
-                .find('.username').text('res.username');
+            console.log(res);
+            $('.user.not-login').hide().siblings('.user.login').show().find('.username').text(res.username);
         }, function(errMsg) {
             // do nothing
+            console.log('false');
         });
     },
     // 加载购物车数量

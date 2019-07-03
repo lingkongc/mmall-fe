@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-30 15:16:51
+ * @Last Modified time: 2019-06-30 22:04:19
  */
 
 const path = require('path');
@@ -17,6 +17,7 @@ const getHtmlConfig = function(name, title) {
         template: `./src/view/${name}.html`,
         filename: `view/${name}.html`,
         title: title,
+        favicon: './favicon.ico', 
         inject: true,
         hash: true,
         chunks: ['common', name]
@@ -29,6 +30,8 @@ const config = {
         'common': './src/page/common/index.js',
         'index': './src/page/index/index.js',
         'user-login': './src/page/user-login/index.js',
+        'user-register': './src/page/user-register/index.js',
+        'user-pass-reset': './src/page/user-pass-reset/index.js',
         'result': './src/page/result/index.js'
     },
     output: {
@@ -51,7 +54,7 @@ const config = {
         proxy: {
             // '/react/api': 'http://www.dell-lee.com'
             '/api': {
-                target: 'http://happymmall.com',
+                target: 'http://test.happymmall.com',
                 pathRewrite: {
                     '^/api': ''
                 },
@@ -77,7 +80,7 @@ const config = {
     //         name: true,
     //         cacheGroups: {
     //             vendors: {
-    //                 test: './src/page/common/index.js',
+    //                 test: '/[\\/]node_modules[\\/]/',
     //                 // 规则优先级 越大越高
     //                 priority: -10,
     //                 filename: "base.js"
@@ -140,6 +143,8 @@ const config = {
         // html模版处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };

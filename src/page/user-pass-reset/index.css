@@ -1,0 +1,111 @@
+/*
+* @Author: Asling
+* @Date:   2019-06-30 21:33:30
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-06-30 22:23:58
+*/
+
+
+ /*去掉导航边线*/
+ .nav-simple {
+     border-bottom: none !important;
+ }
+
+ /*最外层*/
+ .page-wrap {
+     padding: 40px 0;
+     background: #e72955;
+ }
+
+ .user-container {
+     position: relative;
+     margin: auto;
+     /*padding: 10px;*/
+     width: 400px;
+     background: #fff;
+ }
+
+ .user-container .user-title {
+     margin: 0;
+     padding: 10px 0;
+     color: #666;
+     font-size: 18px;
+     font-weight: normal;
+     text-align: center;
+     border-bottom: 1px solid #ddd;
+ }
+
+ .user-container .user-box {
+     padding: 20px;
+     overflow: hidden;
+ }
+
+ /*错误提示*/
+ .user-container .error-item {
+     display: none;
+     padding: 10px;
+     color: #ff0000;
+     /*border: 1px solid #FF0000;*/
+     background-color: #fde9e9;
+ }
+
+ .user-container .error-icon {
+     margin-right: 10px;
+ }
+
+/*step容器*/
+.user-container .step-container{
+     display: none;
+}
+ /*输入框*/
+ .user-container .user-item {
+     position: relative;
+     margin-top: 15px;
+ }
+
+ .user-container .user-item-text{
+     font-size: 14px;
+ }
+
+
+ .user-container .user-label {
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     width: 40px;
+     line-height: 40px;
+     background: #d3d3d3;
+     font-size: 18px;
+     color: #a3a3a3;
+     text-align: center;
+ }
+
+ .user-container .user-content {
+     display: block;
+     box-sizing: border-box;
+     padding: 10px 10px 10px 50px;
+     height: 40px;
+     width: 100%;
+     outline: none;
+     border: 1px solid #d3d3d3;
+     font-size: 14px;
+ }
+
+ .user-container .btn-submit {
+     display: block;
+     margin-top: 15px;
+     height: 40px;
+     text-align: center;
+     /*letter-spacing: 0.2em;*/
+ }
+
+
+ .user-container .link-item {
+     margin-top: 10px;
+     text-align: right;
+ }
+
+ .user-container .link-item .link {
+     margin-left: 5px;
+ }

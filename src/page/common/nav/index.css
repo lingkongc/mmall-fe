@@ -1,8 +1,8 @@
 /*
 * @Author: lingkongc
 * @Date:   2019-06-26 16:40:41
-* @Last Modified by:   lingkongc
-* @Last Modified time: 2019-06-26 20:25:19
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-06-30 21:22:02
 */
 .nav {
     background: #eee;
@@ -32,4 +32,8 @@
 .nav .nav-list .nav-item{
     display: inline-block;
     margin-left: 10px;
+}
+
+.nav .link-text{
+    margin-right: 10px;
 }

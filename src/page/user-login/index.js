@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-27 17:59:39
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-30 14:43:09
+ * @Last Modified time: 2019-06-30 19:23:59
  */
 
 'user strict';
@@ -16,8 +16,8 @@ var toggleError = {
     show: function(errMsg) {
         $('.error-item').show().find('.error-msg').text(errMsg);
     },
-    hied: function() {
-        $('.error-item').show().find('.error-msg').text('');
+    hide: function() {
+        $('.error-item').hide().find('.error-msg').text('');
     }
 };
 

@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-25 16:26:16
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-30 15:15:11
+ * @Last Modified time: 2019-06-30 19:47:32
  */
 
 'use strict';
@@ -27,7 +27,7 @@ var _mm = {
             success: function(res) {
                 // 请求成功
                 if (res.status === 0) {
-                    typeof param.success === 'function' && param.success(res.msg);
+                    typeof param.success === 'function' && param.success(res.data);
                 }
                 // 没有登录 需要强制登录
                 else if (res.status === 10) {
@@ -35,7 +35,7 @@ var _mm = {
                 }
                 // 请求数据错误
                 else if (res.status === 1) {
-                    typeof param.error === 'function' && param.error(res.data, res.msg);
+                    typeof param.error === 'function' && param.error(res.data);
                 }
             },
             error: function(err) {
