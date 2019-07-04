@@ -2,7 +2,7 @@
 * @Author: lingkongc
 * @Date:   2019-06-26 11:30:46
 * @Last Modified by:   Asling
-* @Last Modified time: 2019-06-27 18:45:48
+* @Last Modified time: 2019-07-04 10:38:33
 */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -162,6 +162,25 @@ input[type='checkbox'] {
     overflow: hidden;
 }
 
+/*panel*/
+.panel {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+}
+
+.panel-title {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.panel-body {
+    padding: 10px;
+    overflow: hidden;
+}
+
 /*全局通用样式*/
 
 .hide {
@@ -186,7 +205,7 @@ input[type='checkbox'] {
 
 /*btn*/
 
-.btn{
+.btn {
     display: inline-block;
     padding: 0 20px;
     height: 40px;
@@ -202,7 +221,7 @@ input[type='checkbox'] {
     text-decoration: none;
 }
 
-.btn-min{
+.btn-min {
     height: 25px;
     line-height: 25px;
     font-size: 12px;
@@ -211,7 +230,7 @@ input[type='checkbox'] {
 
 /*loading*/
 
-.loading{
+.loading {
     display: block;
     margin: 10px auto;
     width: 60px;

@@ -1,8 +1,8 @@
 /*
  * @Author: lingkongc
  * @Date:   2019-06-27 16:08:54
- * @Last Modified by:   lingkongc
- * @Last Modified time: 2019-06-27 17:49:05
+ * @Last Modified by:   Asling
+ * @Last Modified time: 2019-07-04 18:35:01
  */
 
 'use strict';
@@ -28,9 +28,9 @@ var navSide = {
             href: './order-list.html'
 
         }, {
-            name: 'pass-update',
+            name: 'user-pass-update',
             desc: '修改密码',
-            href: './pass-update.html'
+            href: './user-pass-update.html'
 
         }, {
             name: 'about',

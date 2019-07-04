@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-03 16:07:49
+ * @Last Modified time: 2019-07-04 17:55:17
  */
 
 const path = require('path');
@@ -34,6 +34,7 @@ const config = {
         'user-pass-reset': './src/page/user-pass-reset/index.js',
         'user-center': './src/page/user-center/index.js',
         'user-center-update': './src/page/user-center-update/index.js',
+        'user-pass-update': './src/page/user-pass-update/index.js',
         'result': './src/page/result/index.js'
     },
     output: {
@@ -149,6 +150,7 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };

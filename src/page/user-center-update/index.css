@@ -1,0 +1,27 @@
+/*
+* @Author: Asling
+* @Date:   2019-07-03 16:08:40
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-04 15:03:18
+*/
+
+.form-line {
+    font-size: 14px;
+}
+
+.form-line .label{
+    display: inline-block;
+    margin: 10px 0;
+        padding: 5px 10px;
+    width: 60px;
+    min-width: 60px;
+    text-align: right;
+}
+
+.form-line input{
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 150px;
+    min-width: 150px;
+    outline: none;
+}
