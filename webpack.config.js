@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-03 16:07:49
+ * @Last Modified time: 2019-07-05 17:45:06
  */
 
 const path = require('path');
@@ -28,7 +28,8 @@ const config = {
     devtool: 'cheap-module-eval-source-map',
     entry: {
         'common': './src/page/common/index.js',
-        'index': './src/page/index/index.js',
+        'index': './src/page/list/index.js',
+        'list': './src/page/index/list.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
         'user-pass-reset': './src/page/user-pass-reset/index.js',
@@ -104,7 +105,7 @@ const config = {
                 options: {
                     name: '[name]_[hash].[ext]',
                     outputPath: 'images/',
-                    limit: 10240
+                    // limit: 10240
                 }
             }
         }, {
@@ -144,6 +145,7 @@ const config = {
         }),
         // html模版处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
