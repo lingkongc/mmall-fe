@@ -2,7 +2,7 @@
 * @Author: Asling
 * @Date:   2019-07-05 17:45:56
 * @Last Modified by:   Asling
-* @Last Modified time: 2019-07-07 09:46:11
+* @Last Modified time: 2019-07-07 14:58:04
 */
 
 /*排序按钮*/
@@ -92,4 +92,15 @@
     color: #666;
     line-height: 20px;
     text-decoration: none;
+}
+
+.err-tip {
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: #eee;
 }
