@@ -1,0 +1,17 @@
+{{#list}}
+<li class="p-item">
+    <div class="p-img-container">
+        <a href="./detail.html?productId={{id}}" class="link" target="_blank">
+            <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}">
+        </a>
+    </div>
+    <div class="p-price-container">
+        <span class="p-price">¥{{price}}</span>
+    </div>
+    <div class="p-name-container">
+        <a href="./detail.html?productId={{id}}" class="p-name" target="_blank">
+            {{name}}
+        </a>
+    </div>
+</li>
+{{/list}}

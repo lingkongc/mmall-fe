@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-26 17:07:20
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-03 10:50:23
+ * @Last Modified time: 2019-07-04 12:21:09
  */
 
 
@@ -80,6 +80,14 @@ var _user = {
         _mm.request({
             url: _mm.getServerUrl('./user/forget_reset_password.do'),
             data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        })
+    },
+    getUserInfo: function(resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('./user/get_information.do'),
             method: 'POST',
             success: resolve,
             error: reject

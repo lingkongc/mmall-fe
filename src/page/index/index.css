@@ -1,6 +1,140 @@
 /*
 * @Author: lingkongc
 * @Date:   2019-06-26 17:40:24
-* @Last Modified by:   lingkongc
-* @Last Modified time: 2019-06-27 15:34:31
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-05 18:36:21
 */
+
+/*keywords-list*/
+
+.keywords-list {
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-right: 10px;
+    float: left;
+    width: 240px;
+    height: 330px;
+    background: #666;
+}
+
+.keywords-list .keywords-item {
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.keywords-list .keywords-item:hover {
+    background: #999;
+}
+
+.keywords-list .link {
+    margin-right: 6px;
+    color: #fff;
+}
+
+.keywords-list .link:hover {
+    color: #c60023;
+}
+
+/*banner*/
+.banner-container {
+    box-sizing: border-box;
+    float: left;
+    width: 830px;
+    height: 330px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.banner-container .loading {
+    margin-top: 130px;
+}
+
+.swiper-container {
+    height: 100%;
+}
+
+.swiper-slide a {
+    display: block;
+    height: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+/*floor*/
+.floor-wrap {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.floor-wrap .floor-title {
+    height: 50px;
+    color: #d58717;
+    font-weight: normal;
+    font-size: 20px;
+    border-bottom: 1px solid #d58717;
+}
+
+.floor-wrap:nth-child(2) .floor-title {
+    color: #3b838c;
+    border-bottom: 1px solid #3b838c;
+}
+
+.floor-wrap:nth-child(3) .floor-title {
+    color: #a93931;
+    border-bottom: 1px solid #a93931;
+}
+
+.floor-wrap:nth-child(4) .floor-title {
+    color: #488bad;
+    border-bottom: 1px solid #488bad;
+}
+
+.floor-wrap:nth-child(5) .floor-title {
+    color: #642663;
+    border-bottom: 1px solid #642663;
+}
+
+.floor-wrap .floor-list {
+    margin-right: -20px;
+}
+
+.floor-wrap .floor-item {
+    position: relative;
+    float: left;
+    margin: 15px 20px 20px 0;
+    width: 200px;
+    height: 220px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s ease;
+}
+
+.floor-wrap .floor-item:hover {
+    box-shadow: 1px 1px 7px #ddd;
+}
+
+.floor-wrap .floor-text {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.floor-wrap .floor-img {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    width: 80%;
+    height: 75%;
+    border: none;
+}

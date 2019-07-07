@@ -1,0 +1,95 @@
+/*
+* @Author: Asling
+* @Date:   2019-07-05 17:45:56
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-07 09:32:22
+*/
+
+/*排序按钮*/
+.sort-container {
+    overflow: hidden;
+}
+
+.sort-item {
+    float: left;
+    display: inline-block;
+    position: relative;
+    padding: 0 8px;
+    margin-right: -1px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+.sort-item.active {
+    background: #c60023;
+    border: 1px solid #c60023;
+    color: #fff;
+}
+
+.sort-item .fa-sort-desc {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.sort-item.asc .fa-sort-desc{
+    opacity: .6;
+}
+
+.sort-item.desc .fa-sort-asc{
+    opacity: .6;
+}
+
+/*列表*/
+.p-list-container{
+    margin-top: 15px;
+    margin-right: -20px;
+    overflow: hidden;
+}
+
+.p-list-container .p-item{
+    float: left;
+    position: relative;
+    width: 180px;
+    padding: 10px;
+    margin: 0 20px 20px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.p-item .p-img-container{
+    width: 180px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.p-item .p-img{
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.p-item .p-price-container{
+    line-height: 30px;
+    height: 30px;
+}
+
+.p-item .p-price{
+    font-size: 16px;
+    color: #e7380d;
+}
+
+.p-item .p-name-container{
+    height: 40px;
+    overflow: hidden;
+}
+
+.p-item .p-name{
+    margin-bottom: 10px;
+    color: #666;
+    line-height: 20px;
+    text-decoration: none;
+}

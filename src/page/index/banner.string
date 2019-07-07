@@ -1,0 +1,37 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <a href="./list.html?categoryId=100021" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner1.jpg">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="./list.html?categoryId=100030" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner2.jpg">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="./list.html?categoryId=100016" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner3.jpg">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="./list.html?categoryId=100001" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner4.jpg">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="./list.html?categoryId=100021" target="_blank">
+                <img class="banner-img" src="../../image/banner/banner5.jpg">
+            </a>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>

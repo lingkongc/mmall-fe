@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-30 22:04:19
+ * @Last Modified time: 2019-07-05 18:29:17
  */
 
 const path = require('path');
@@ -17,7 +17,7 @@ const getHtmlConfig = function(name, title) {
         template: `./src/view/${name}.html`,
         filename: `view/${name}.html`,
         title: title,
-        favicon: './favicon.ico', 
+        favicon: './favicon.ico',
         inject: true,
         hash: true,
         chunks: ['common', name]
@@ -29,9 +29,12 @@ const config = {
     entry: {
         'common': './src/page/common/index.js',
         'index': './src/page/index/index.js',
+        'list': './src/page/list/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
         'user-pass-reset': './src/page/user-pass-reset/index.js',
+        'user-center': './src/page/user-center/index.js',
+        'user-center-update': './src/page/user-center-update/index.js',
         'result': './src/page/result/index.js'
     },
     output: {
@@ -102,7 +105,7 @@ const config = {
                 options: {
                     name: '[name]_[hash].[ext]',
                     outputPath: 'images/',
-                    limit: 10240
+                    // limit: 10240
                 }
             }
         }, {
@@ -142,9 +145,12 @@ const config = {
         }),
         // html模版处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center', '用户中心')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
     ]
 };

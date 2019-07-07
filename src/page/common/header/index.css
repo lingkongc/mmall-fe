@@ -1,8 +1,8 @@
 /*
 * @Author: lingkongc
 * @Date:   2019-06-26 19:33:49
-* @Last Modified by:   lingkongc
-* @Last Modified time: 2019-06-26 20:28:02
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-03 16:41:01
 */
 
 /*通用头部导航*/
@@ -15,6 +15,7 @@
     font-weight: bold;
     line-height: 1.4;
     color: #c60023;
+    text-decoration: none;
 }
 
 .header .search {
@@ -35,4 +36,13 @@
     position: absolute;
     height: 44px;
     width: 80px;
+}
+
+/*面包屑导航*/
+.crumb {
+    margin-bottom: 15px;
+    background: #eee;
+    font-size: 14px;
+    line-height: 40px;
+    color: #888;
 }
