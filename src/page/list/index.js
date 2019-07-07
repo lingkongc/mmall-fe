@@ -2,7 +2,7 @@
  * @Author: Asling
  * @Date:   2019-07-05 17:45:32
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-07 08:58:28
+ * @Last Modified time: 2019-07-07 09:43:15
  */
 
 'use strict';
@@ -109,3 +109,4 @@ var page = {
 $(function() {
     page.init();
 })
+

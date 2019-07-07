@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-26 16:38:07
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-06-30 19:41:57
+ * @Last Modified time: 2019-07-04 19:31:58
  */
 
 
@@ -46,7 +46,6 @@ var nav = {
     // 加载用户信息
     loadUserInfo: function() {
         _user.checkLogin(function(res) {
-            console.log(res);
             $('.user.not-login').hide().siblings('.user.login').show().find('.username').text(res.username);
         }, function(errMsg) {
             // do nothing

@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-26 17:07:20
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-04 12:21:09
+ * @Last Modified time: 2019-07-07 09:58:43
  */
 
 
@@ -78,7 +78,7 @@ var _user = {
     // 重置密码
     resetPassword: function(userInfo, resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('./user/forget_reset_password.do'),
+            url: _mm.getServerUrl('/user/forget_reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
@@ -87,7 +87,26 @@ var _user = {
     },
     getUserInfo: function(resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('./user/get_information.do'),
+            url: _mm.getServerUrl('/user/get_information.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
+        })
+    },
+    updateUserInfo: function(userInfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/update_information.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        })
+    },
+    // 修改密码
+    updatePassword: function(userInfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/reset_password.do'),
+            data: userInfo,
             method: 'POST',
             success: resolve,
             error: reject
@@ -96,7 +115,7 @@ var _user = {
     // 登出
     logout: function(resolve, reject) {
         _mm.request({
-            url: _mm.getServerUrl('./user/logout.do'),
+            url: _mm.getServerUrl('/user/logout.do'),
             method: 'POST',
             success: resolve,
             error: reject

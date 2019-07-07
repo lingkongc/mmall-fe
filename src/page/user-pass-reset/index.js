@@ -2,10 +2,10 @@
  * @Author: Asling
  * @Date:   2019-06-30 21:33:37
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-03 10:41:11
+ * @Last Modified time: 2019-07-05 12:02:57
  */
 
-'user strict';
+'use strict';
 require('../common/nav-simple/index.js');
 require('./index.css');
 var _mm = require('../../util/mm.js');
