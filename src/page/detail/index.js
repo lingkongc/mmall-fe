@@ -2,7 +2,7 @@
  * @Author: Asling
  * @Date:   2019-07-07 10:25:44
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-07 15:57:33
+ * @Last Modified time: 2019-07-08 08:14:14
  */
 'use strict';
 
@@ -19,7 +19,7 @@ var page = {
         productId: _mm.getUrlParam('productId') || '',
     },
     init: function() {
-        this.loadDetail();
+        this.onLoad();
         this.bindEvnet();
     },
     onLoad: function() {

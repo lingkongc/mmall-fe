@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-24 10:30:12
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-07 10:25:02
+ * @Last Modified time: 2019-07-08 11:34:04
  */
 
 const path = require('path');
@@ -25,12 +25,13 @@ const getHtmlConfig = function(name, title) {
 };
 const config = {
     mode: 'development',
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     entry: {
         'common': './src/page/common/index.js',
         'index': './src/page/index/index.js',
         'list': './src/page/list/index.js',
         'detail': './src/page/detail/index.js',
+        'cart': './src/page/cart/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js',
         'user-pass-reset': './src/page/user-pass-reset/index.js',
@@ -148,6 +149,7 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
+        new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),

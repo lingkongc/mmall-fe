@@ -2,7 +2,7 @@
  * @Author: lingkongc
  * @Date:   2019-06-26 16:38:07
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-04 19:31:58
+ * @Last Modified time: 2019-07-08 16:17:13
  */
 
 
@@ -55,9 +55,9 @@ var nav = {
     // 加载购物车数量
     loadCartCount: function() {
         _cart.getCartCount(function(res) {
-            $('.nav .cart-cunt').text(res || 0)
+            $('.nav .cart-count').text(res || 0)
         }, function(errMsg) {
-            $('.nav .cart-cunt').text(0)
+            $('.nav .cart-count').text(0)
         });
     }
 }

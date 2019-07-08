@@ -1,0 +1,148 @@
+/*
+* @Author: Asling
+* @Date:   2019-07-07 20:49:55
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-08 15:25:45
+*/
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
+}
+
+.cart-header {
+    background: #eee;
+}
+
+.cart-table .cart-cell {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.cart-table .cell-check {
+    padding-left: 20px;
+    width: 10%;
+    text-align: left;
+}
+
+.cart-table .cell-img {
+    width: 10%;
+    text-align: left;
+}
+
+.cart-table .cell-img .p-img {
+    margin: 10px 0 10px 0;
+    height: 70px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+
+
+.cart-table .cell-info {
+    width: 35%;
+    text-align: left;
+}
+
+.cart-header .cell-info {
+    width: 45%;
+}
+
+.cart-table .cell-price {
+    width: 10%;
+    text-align: center;
+}
+
+.cart-table .cell-count {
+    width: 15%;
+    text-align: center;
+}
+
+.cart-table .cell-count .count-input {
+    padding: 5px 10px;
+    width: 60px;
+    border: 1px solid #ddd;
+    text-align: center;
+    outline: none;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.cart-table .count-btn {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #ddd;
+    line-height: 27px;
+    cursor: pointer;
+    background: #fff;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.cart-table .cell-total {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cart-list .cell-total {
+    color: #C60023;
+}
+
+.cart-table .cell-opera {
+    width: 10%;
+    text-align: center;
+}
+
+/*footer*/
+.cart-footer {
+    position: relative;
+    line-height: 40px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.cart-footer .select-container {
+    float: left;
+    padding-left: 20px;
+}
+
+.cart-footer .delete-container {
+    float: left;
+    margin-left: 20px;
+}
+
+.cart-footer .submit-container {
+    float: right;
+}
+
+.cart-footer .submit-container span {
+    vertical-align: middle;
+}
+
+.cart-footer .submit-total {
+    margin-right: 30px;
+    font-size: 18px;
+    color: #c60023;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.cart-footer .btn-submit {
+    width: 100px;
+}
+
+/*错误信息*/
+.err-tip {
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
+}
