@@ -1,0 +1,243 @@
+/*
+* @Author: Asling
+* @Date:   2019-07-08 16:45:43
+* @Last Modified by:   Asling
+* @Last Modified time: 2019-07-09 20:35:22
+*/
+
+/*地址部分样式*/
+.address-item,
+.address-add {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    padding: 10px;
+    width: 200px;
+    height: 100px;
+    border: 3px dashed #ccc;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.address-item {
+    margin-bottom: 10px;
+}
+
+.address-item:hover,
+.address-add:hover {
+    background: #fafafa;
+}
+
+.address-item.active {
+    border: 3px dashed #c60023;
+}
+
+
+.address-item .address-title {
+    padding-bottom: 5px;
+    height: 20px;
+    line-height: 20px;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    overflow: hidden;
+}
+
+.address-item .address-detail {
+    margin-top: 5px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    color: #666;
+}
+
+.address-item .address-opera {
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.address-item:hover .address-opera {
+    display: block;
+}
+
+.address-item .address-opera .link {
+    margin-right: 5px;
+}
+
+.address-add .address-new {
+    margin-top: 15px;
+    text-align: center;
+    color: #ccc;
+}
+
+.address-add .address-new .fa {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.address-add .address-new .text {
+    font-size: 13px;
+}
+
+.address-item .address-opera .item {
+    margin-right: 5px;
+}
+
+/*商品清单*/
+.product-table {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-collapse: collapse;
+}
+
+.product-table th {
+    line-height: 40px;
+    background: #eee;
+}
+
+.product-table td {
+    vertical-align: middle;
+    border-bottom: 1px dashed #ddd;
+}
+
+.product-table .cell-img {
+    width: 10%;
+    text-align: center;
+}
+
+.product-table .p-img {
+    display: block;
+    margin: 10px 0;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+}
+
+.product-table .cell-info {
+    width: 30%;
+    text-align: center;
+}
+
+.product-table .cell-price {
+    width: 20%;
+    text-align: center;
+}
+
+.product-table .cell-count {
+    width: 20%;
+    text-align: center;
+}
+
+.product-table .cell-total {
+    width: 20%;
+    text-align: center;
+}
+
+/*提交按钮*/
+.submit-container {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.submit-container span {
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+    color: #aaa;
+}
+
+.submit-container .submit-total {
+    color: #c60023;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.submit-container .order-submit {
+    width: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+/* 模态框*/
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -175px;
+    width: 350px;
+    background: #fff
+}
+
+.modal .modal-header {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal .modal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.modal .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 10px 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal .modal-body {
+    padding: 10px;
+}
+
+.form .form-line {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.form .label {
+    display: inline-block;
+    width: 80px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.form .label .required {
+    color: #c60023;
+}
+
+.form .form-item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.form select.form-item {
+    width: 100px;
+    border: 1px solid #eee;
+}
+
+.form .address-btn {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+}

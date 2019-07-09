@@ -2,7 +2,7 @@
  * @Author: Asling
  * @Date:   2019-07-07 20:49:48
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-08 16:20:44
+ * @Last Modified time: 2019-07-08 16:45:02
  */
 'use strict';
 
@@ -121,7 +121,7 @@ var page = {
         $(document).on('click', '.btn-submit', function() {
             // 总价大于0进行提交
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             } else {
                 _mm.errorTips('请选择商品后再进行提交');
             }

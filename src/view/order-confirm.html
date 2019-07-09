@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="zh">
+
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>
+        <%= htmlWebpackPlugin.options.title %> - MMall电商平台</title>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-container">
+                <a href="./index.html" class="link">MMall</a>
+                <span>/</span>
+                <span class="link-text">
+                    <%= htmlWebpackPlugin.options.title %>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrap w">
+        <div class="panel">
+            <h1 class="panel-title">收货地址</h1>
+            <div class="panel-body address-container"></div>
+        </div>
+        <div class="panel">
+            <h1 class="panel-title">商品清单</h1>
+            <div class="panel-body product-container"></div>
+        </div>
+    </div>
+    <div class="modal-wrap"></div>
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+
+</html>
