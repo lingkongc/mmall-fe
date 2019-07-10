@@ -2,7 +2,7 @@
  * @Author: Asling
  * @Date:   2019-07-08 16:45:36
  * @Last Modified by:   Asling
- * @Last Modified time: 2019-07-09 20:29:46
+ * @Last Modified time: 2019-07-10 10:47:17
  */
 
 'use strict';
@@ -39,7 +39,7 @@ var page = {
             _this.data.selectedAddressId = $(this).data('id');
         });
         // 订单提交
-        $(document).on('click', 'order-submit', function() {
+        $(document).on('click', '.order-submit', function() {
             var shippingId = _this.data.selectedAddressId;
             if (shippingId) {
                 _order.createOrder({

@@ -26,17 +26,7 @@
     </div>
     <div class="page-wrap w">
         <%= require('html-loader!./layout/nav-side.html') %>
-        <div class="content with-nav">
-            <div class="panel">
-                <div class="panel-title">
-                    <%= htmlWebpackPlugin.options.title %>
-                </div>
-                <div class="panel-body">
-                    <div class="order-list-container"></div>
-                    <div class="pagination"></div>
-                </div>
-            </div>
-        </div>
+        <div class="content with-nav"></div>
     </div>
     <div class="loading"></div>
     <%= require('html-loader!./layout/footer.html') %>
